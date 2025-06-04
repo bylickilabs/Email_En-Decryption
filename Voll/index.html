@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verschlüsselungs-Tool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1-crypto-js.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Verschlüsselungs-Tool</h1>
+
+        <div class="form-container">
+            <textarea id="messageContent" placeholder="Geben Sie die Nachricht ein..." rows="8" cols="50"></textarea>
+
+            <input type="text" id="encryptionKey" placeholder="Geben Sie den Verschlüsselungsschlüssel ein" />
+
+            <div class="buttons">
+                <button onclick="encryptMessage()">Verschlüsseln</button>
+                <button onclick="decryptMessage()">Entschlüsseln</button>
+            </div>
+            
+            <div class="result">
+                <label for="encryptedMessage">Verschlüsselte Nachricht:</label>
+                <textarea id="encryptedMessage" readonly rows="6" cols="50"></textarea>
+            </div>
+
+            <div class="result">
+                <label for="decryptedMessage">Entschlüsselte Nachricht:</label>
+                <textarea id="decryptedMessage" readonly rows="6" cols="50"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button onclick="copyToClipboard('encrypted')">Verschlüsselte Nachricht kopieren</button>
+                <button onclick="copyToClipboard('decrypted')">Entschlüsselte Nachricht kopieren</button>
+            </div>
+
+            <!-- Download Buttons -->
+            <div class="buttons">
+                <button onclick="downloadText('encrypted')" id="downloadEncryptedBtn" disabled>Verschlüsselte Nachricht herunterladen</button>
+                <button onclick="downloadText('decrypted')" id="downloadDecryptedBtn" disabled>Entschlüsselte Nachricht herunterladen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

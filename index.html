@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mail Verschlüsselung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">E-Mail Verschlüsselung</h1>
+        <div class="form-container">
+            <textarea id="emailContent" placeholder="Geben Sie Ihre E-Mail hier ein..." rows="10" cols="50"></textarea>
+            <button onclick="encryptEmail()">E-Mail verschlüsseln</button>
+            <div class="result">
+                <label for="encryptedEmail">Verschlüsselte E-Mail:</label>
+                <textarea id="encryptedEmail" readonly rows="6" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
